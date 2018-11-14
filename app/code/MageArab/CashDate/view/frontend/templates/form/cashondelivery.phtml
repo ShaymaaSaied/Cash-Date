@@ -1,0 +1,23 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var $block \MageArab\CashDate\Block\Form\Cash
+ */
+$instructions = $block->getInstructions();
+$cashDate=$block->getCashDate()
+?>
+<?php if ($instructions): ?>
+    <?php $methodCode = $block->escapeHtml($block->getMethodCode());?>
+    <div class="items <?= /* @noEscape */ $methodCode ?> instructions agreement" id="payment_form_<?= /* @noEscape */ $methodCode ?>" style="display: none;">
+        <?= /* @noEscape */ nl2br($block->escapeHtml($instructions)) ?>
+        <br>
+        <span><?=__('Checkout Date')?>?></span>
+        <?= /* @noEscape */ $block->escapeHtml($cashDate) ?>
+    </div>
+<?php endif; ?>

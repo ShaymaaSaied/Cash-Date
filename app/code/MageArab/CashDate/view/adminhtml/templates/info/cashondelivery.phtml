@@ -1,0 +1,12 @@
+<?php
+
+/**
+* @var $block \MageArab\CashDate\Block\Info\Cashondelivery
+*/
+?>
+<?= $block->escapeHtml($block->getMethod()->getTitle()) ?>
+<?php if ($block->getCashDate()): ?>
+    <br /><?= $block->escapeHtml(__('Checkout Date: ')) ?>
+    <?= $block->escapeHtml($block->getCashDate()) ?>
+
+<?php endif; ?>

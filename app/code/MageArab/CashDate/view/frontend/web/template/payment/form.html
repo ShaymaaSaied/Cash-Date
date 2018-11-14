@@ -1,0 +1,23 @@
+<!--
+  ~ Created By Shaymaa at 01/11/18 15:15.
+  -->
+
+<form id="cashondelivery-form" class="form form-cashondelivery-order" data-role="cashondelivery-form">
+    <fieldset class="fieldset payment method" data-bind='attr: {id: "payment_form_" + getCode()}'>
+        <div class="field field-number required">
+            <label for="cash_date" class="label">
+                <span>Checkout Date</span>
+            </label>
+            <div class="control">
+                <input type="datetime-local"
+                       id="cash_date"
+                       name="payment[cash_date]"
+                       data-validate="{required:true}"
+                       data-bind='
+                                attr: {title: $t("Checkout Date")},
+                                value: cashDate'
+                       class="input-text"/>
+            </div>
+        </div>
+    </fieldset>
+</form>

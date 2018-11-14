@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--
+  Created By Shaymaa at 04/11/18 13:51.
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="\Magento\OfflinePayments\Model\Cashondelivery" type="MageArab\CashDate\Model\Cash" />
+    <type name="Magento\Quote\Model\Quote\Payment">
+        <plugin name="quotePayment" type="MageArab\CashDate\Plugin\QuotePaymentPlugin"/>
+    </type>
+</config>

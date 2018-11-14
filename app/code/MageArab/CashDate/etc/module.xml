@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+  Created By Shaymaa at 01/11/18 14:04.
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Module/etc/module.xsd">
+    <module name="MageArab_CashDate" setup_version="1.0.0"></module>
+        <sequence>
+            <module name="Magento_OfflinePayment"/>
+            <module name="Magento_Checkout"/>
+            <module name="Magento_Quote"/>
+        </sequence>
+</config>
