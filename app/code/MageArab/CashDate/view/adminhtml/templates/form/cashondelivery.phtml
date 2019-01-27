@@ -1,0 +1,19 @@
+<?php
+/**
+* @var $block \MageArab\CashDate\Block\Form\Cash
+*/
+$cashDate=$block->getCashDate();
+?>
+<?php if ($cashDate): ?>
+    <?php $methodCode = $block->escapeHtml($block->getMethodCode());?>
+    <ul class="form-list checkout-agreements" id="payment_form_<?= /* @noEscape */ $methodCode ?>" style="display:none;">
+    <?php if($cashDate):?>
+        <li>
+            <div class="<?= /* @noEscape */ $methodCode ?>-instructions-content checkout-agreement-item-content">
+                <strong><?= $block->escapeHtml(__('Checkout Date')) ?></strong>
+                <?= $block->escapeHtml($block->getCashDate()) ?>
+            </div>
+        </li>
+    <?php endif;?>
+    </ul>
+<?php endif; ?>

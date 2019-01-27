@@ -23,5 +23,18 @@ class Cash extends \Magento\OfflinePayments\Block\Form\Cashondelivery {
     protected $_template = 'form/cashondelivery.phtml';
 
 
+    public function getCashDate()
+    {
+        if ($this->_cashDate === null) {
+            $this->_convertAdditionalData();
+            // $this->_cashDate=$this->getInfo()->getCashDate();
+        }
+        return $this->_cashDate;
+    }
 
+    protected function _convertAdditionalData(){
+
+        $data = $this->getInfoData('additional_information');
+        return $this;
+    }
 }
